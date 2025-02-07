@@ -1,0 +1,242 @@
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F9F2F6;
+    /* Fundo suave */
+    color: #333;
+}
+
+/* Header */
+header {
+    position: relative;
+    background-color: #F08AA2;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-image: url('imagens/banner_maria.jpg');
+    /* Customize sua imagem */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+
+header h1 {
+    font-size: 4em;
+    font-family: 'Pacifico', cursive;
+    z-index: 1;
+    animation: fadeInHeader 1.5s ease-out;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(240, 138, 162, 0.9);
+    /* Rosa suave */
+    padding: 15px 0;
+    z-index: 2;
+    position: relative;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 14px 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 15px;
+    border-radius: 50px;
+}
+
+nav a:hover {
+    background-color: #F5A8C4;
+}
+
+/* Estilos do Menu Hamburguer */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Menu de navegação */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Itens do menu */
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px 20px;
+    border-radius: 25px;
+}
+
+/* Hover nos links */
+.nav-links a:hover {
+    background-color: #F5A8C4;
+}
+
+/* Rodapé */
+footer {
+    background-color: #F08AA2;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+/* Animação de fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Seção de Agendamentos */
+.agendamentos {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.agendamentos h2 {
+    font-size: 2.5em;
+    color: #F08AA2;
+}
+
+.agendamentos p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+/* Formulário */
+form {
+    background: white;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Campos do Formulário */
+form label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 5px;
+    font-size: 1.1em;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #F08AA2;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #F5A8C4;
+    box-shadow: 0 0 10px rgba(240, 138, 162, 0.5);
+}
+
+/* Botão de Agendamento */
+form button {
+    width: 100%;
+    background: #F08AA2;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.2em;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: #d76a8a;
+    transform: scale(1.05);
+}
+
+/* WhatsApp Info */
+.whatsapp-info {
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-info p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.whatsapp-link {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.3em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.whatsapp-link:hover {
+    background: #1da851;
+    transform: scale(1.05);
+}

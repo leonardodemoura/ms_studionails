@@ -1,0 +1,138 @@
+/* Ajustes gerais para telas menores */
+@media (max-width: 768px) {
+    /* Ajuste do cabeçalho */
+    header {
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Menu responsivo */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1rem;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: block; /* Exibe o ícone hambúrguer no mobile */
+    }
+
+    .nav-links {
+        display: none; /* Escondido por padrão */
+        flex-direction: column;
+        gap: 15px;
+        background-color: rgba(240, 138, 162, 0.9);
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostra o menu quando ativado */
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        width: 100%;
+        font-size: 1.2rem;
+        margin-left: 0px;
+    }
+
+    /* Ajuste do carrossel */
+    .carousel-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajuste das imagens dos profissionais */
+    .img_profissional {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Ajuste do layout principal */
+    .container {
+        padding: 10px;
+    }
+
+    /* mobile aba dicas */
+    /* Ajuste do título da seção */
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    /* Ajuste da grid das dicas */
+    .dicas-container {
+        grid-template-columns: 1fr; /* Exibe uma única coluna em dispositivos móveis */
+        gap: 20px;
+        padding: 0 10px; /* Adiciona padding para não ficar colado nas bordas */
+    }
+
+    /* Ajuste dos cards de dica */
+    .dica-card {
+        padding: 20px;
+        box-shadow: none; /* Remover sombra para simplificar o visual no mobile */
+        font-size: 0.95rem; /* Ajustar o tamanho da fonte */
+    }
+
+    /* Ajuste dos ícones no card */
+    .dica-card .card-icon {
+        font-size: 2.5rem; /* Menor tamanho de ícone */
+        margin-bottom: 10px;
+    }
+
+    .dica-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .dica-card p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* Ajuste da animação ao rolar (opcional) */
+    .dica-card.show {
+        opacity: 1; /* Aumenta a visibilidade para dispositivos móveis */
+    }
+
+    /* Botões responsivos */
+    .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    /* Rodapé */
+    footer {
+        text-align: center;
+        padding: 15px;
+    }
+}

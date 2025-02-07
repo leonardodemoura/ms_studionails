@@ -1,0 +1,329 @@
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F9F2F6;
+    /* Fundo suave */
+    color: #333;
+}
+
+/* Header */
+header {
+    position: relative;
+    background-color: #F08AA2;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-image: url('imagens/banner_maria.jpg');
+    /* Customize sua imagem */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+
+header h1 {
+    font-size: 4em;
+    font-family: 'Pacifico', cursive;
+    z-index: 1;
+    animation: fadeInHeader 1.5s ease-out;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(240, 138, 162, 0.9);
+    /* Rosa suave */
+    padding: 15px 0;
+    z-index: 2;
+    position: relative;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 14px 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 15px;
+    border-radius: 50px;
+}
+
+nav a:hover {
+    background-color: #F5A8C4;
+}
+
+/* Estilos do Menu Hamburguer */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Menu de navegação */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Itens do menu */
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px 20px;
+    border-radius: 25px;
+}
+
+/* Hover nos links */
+.nav-links a:hover {
+    background-color: #F5A8C4;
+}
+
+#about h2{
+    font-size: 2.5em;
+    color: #F08AA2;
+    margin-bottom: 20px;
+}
+
+#about h3{
+    font-size: 1.8em;
+    color: #F08AA2;
+    margin-bottom: 20px;
+}
+#about p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #666;
+}
+/* Efeito de Scroll suave */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Carrossel de Imagens */
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 11px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Botões e links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    background-color: #F08AA2;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #F5A8C4;
+}
+
+.social-links i {
+    font-size: 1.5em;
+}
+
+/* Estilo para os ícones sociais */
+
+#services h2{
+    font-size: 2.5em;
+    color: #F08AA2;
+    margin-bottom: 20px;
+}
+.service-social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #F08AA2;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #F5A8C4;
+    transform: scale(1.05);
+}
+
+.social-icon i {
+    margin-right: 8px;
+    /* Espaço entre o ícone e o texto */
+    font-size: 1.4em;
+}
+
+
+
+/* Sobre a Profissional */
+.img_profissional {
+    border-radius: 32%;
+    height: 55vh;
+    width: 24%;
+}
+
+/* Estilos para a Galeria de Serviços */
+.services-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-size: 1.7em;
+    color: #F08AA2;
+    padding: 20px;
+    font-weight: 600;
+}
+
+.service-card p {
+    padding: 0 15px 15px;
+    color: #666;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Efeito de profundidade */
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #F08AA2;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+/* Animação de fade-in para os elementos */
+
+/* Animação de fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Styles */
+button {
+    background-color: #F08AA2;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #F5A8C4;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
