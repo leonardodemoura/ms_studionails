@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamentos | Studio de Nails</title>
+    <title>Dicas | MS Eduarda Santos</title>
     <!-- Importando fontes modernas -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="dicas.css">
@@ -16,7 +16,7 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Serviços de Nails</h1>
+        <h1>MS Eduarda Santos</h1>
     </header>
 
     <!-- Navegação -->
@@ -26,10 +26,10 @@
         </div>
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html"><i class="fas fa-user"></i> Sobre</a></li>
-            <li><a href="servicos.html"><i class="fas fa-cut"></i> Serviços</a></li>
-            <li><a href="#tips"><i class="fas fa-lightbulb"></i> Dicas da Nails</a></li>
+            <li><a href="catalogo.html"><i class="fas fa-cut"></i> Catálogo</a></li>
+            <li><a href="dicas.html"><i class="fas fa-lightbulb"></i> Dicas da Nails</a></li>
             <li><a href="agendamentos.html"><i class="fas fa-calendar"></i> Agendamentos</a></li>
-            <li><a href="#access"><i class="fas fa-lock"></i> Área Restrita</a></li>
+            <li><a href="sistema/sistema_login.html"><i class="fas fa-lock"></i> Área Restrita</a></li>
         </ul>
     </nav>
 
@@ -58,25 +58,43 @@
                 <div class="card-icon">
                     <i class="fas fa-file-alt"></i>
                 </div>
-                <h3>Corte e Lixe com Cuidado</h3>
-                <p>Evite cortar suas unhas muito curtas. Lixar sempre em uma direção e escolher o tipo de lixa adequado
-                    para suas unhas evita danos e rachaduras.</p>
+                <h3>Não Levar as Unhas à Boca</h3>
+                <p>Nossa saliva possui propriedades ácidas, o que contribui para o enfraquecimento das unhas. Além disso, em casos de alongamento, há maior propensão de descolamento.</p>
             </div>
 
             <div class="dica-card">
                 <div class="card-icon">
                     <i class="fas fa-star"></i>
                 </div>
-                <h3>Proteja Suas Unhas com Base</h3>
-                <p>Antes de aplicar esmaltes, use uma base para proteger a unha de manchas e fortalecer a estrutura,
-                    mantendo as unhas mais saudáveis e duráveis.</p>
+                <h3>Cuidado para não bater o alongamento</h3>
+                <p>Impactos no alongamento podem ocasionar o descolamento das unhas, além de provocar o acamamento das unhas naturais.</p>
             </div>
         </div>
     </section>
+    <script>
+        // Efeito de Animação ao Rolar
+        document.addEventListener("DOMContentLoaded", () => {
+            const dicaCards = document.querySelectorAll('.dica-card');
+
+            window.addEventListener('scroll', () => {
+                dicaCards.forEach(card => {
+                    const cardPosition = card.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.5;
+
+                    if (cardPosition < screenPosition) {
+                        card.classList.add('show');
+                    } else {
+                        card.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+    </script>
     <script src="dicas.js"></script>
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 Studio de Nails. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Studio MS Eduarda. Todos os direitos reservados.</p>
     </footer>
 </body>
 

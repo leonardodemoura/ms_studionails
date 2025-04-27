@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamentos | Studio de Nails</title>
+    <title>Agendamentos | MS Eduarda Santos</title>
     <!-- Importando fontes modernas -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lora:wght@400;700&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="agendamentos.css">
@@ -16,7 +17,7 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Serviços de Nails</h1>
+        <h1>MS Eduarda Santos</h1>
     </header>
 
     <!-- Navegação -->
@@ -26,19 +27,20 @@
         </div>
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html"><i class="fas fa-user"></i> Sobre</a></li>
-            <li><a href="servicos.html"><i class="fas fa-cut"></i> Serviços</a></li>
+            <li><a href="catalogo.html"><i class="fas fa-cut"></i> Catálogo</a></li>
             <li><a href="dicas.html"><i class="fas fa-lightbulb"></i> Dicas da Nails</a></li>
             <li><a href="agendamentos.html"><i class="fas fa-calendar"></i> Agendamentos</a></li>
-            <li><a href="#access"><i class="fas fa-lock"></i> Área Restrita</a></li>
+            <li><a href="sistema/sistema_login.html"><i class="fas fa-lock"></i> Área Restrita</a></li>
         </ul>
     </nav>
+
     <!-- Seção de Agendamentos -->
     <section class="agendamentos">
         <h2>Agende seu horário</h2>
         <p>Escolha seu serviço e selecione a melhor data e horário para você!</p>
 
         <!-- Formulário de Agendamento -->
-        <form action="processa_agendamento.php" method="POST">
+        <form id="form-agendamento">
             <div class="campo">
                 <label for="nome">Nome Completo <i class="fas fa-user"></i>:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -69,7 +71,7 @@
                 <input type="time" id="horario" name="horario" required>
             </div>
 
-            <button type="submit" id="btn-agendar"><i class="fas fa-check"></i> Agendar</button>
+            <button type="button" id="btn-agendar"><i class="fas fa-check"></i> Agendar</button>
         </form>
 
         <!-- Atendimento via WhatsApp -->
@@ -88,6 +90,22 @@
         hamburgerMenu.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
+
+        document.getElementById('btn-agendar').addEventListener('click', function () {
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            const servico = document.getElementById('servico').value;
+            const data = document.getElementById('data').value;
+            const horario = document.getElementById('horario').value;
+
+            const mensagem = `Olá, meu nome é ${nome}!%0AQuero agendar o serviço de ${servico} para o dia ${data} às ${horario}.%0AMeu telefone é: ${telefone}.`;
+
+            const numeroWhatsapp = '55954938753'
+            const url = `https://wa.me/${numeroWhatsapp}?text=${mensagem}`;
+
+            window.open(url, '_blank');
+        });
+
     </script>
 </body>
 

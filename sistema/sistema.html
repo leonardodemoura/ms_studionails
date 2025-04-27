@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle - Studio de Nails</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lora:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="sistema.css"> <!-- Link para o CSS -->
+</head>
+
+<body>
+    <!-- Barra Lateral -->
+    <nav class="barra_lateral">
+        <header>
+            <div class="logo_area">
+                <div class="logo">
+                    <img src="imagens/logo_nails.png" alt="Logo" />
+                </div>
+                <div class="texto_logo">
+                    <span class="nome_usuario">Nome</span>
+                    <span class="cargo_usuario">Cargo</span>
+                </div>
+            </div>
+            <button class="toggle">☰</button>
+        </header>
+        <div class="menu">
+            <ul id="menu">
+                <li class="item-menu">
+                    <a href="sistema.html" class="link-menu">
+                        <i class="fas fa-home"></i>
+                        <span class="texto-menu">Dashboard</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="agendamentos.php" class="link-menu">
+                        <i class="fas fa-calendar-day"></i>
+                        <span class="texto-menu">Agendamentos</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="promocoes.php" class="link-menu">
+                        <i class="fas fa-box"></i>
+                        <span class="texto-menu">Promoções</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="#" class="link-menu">
+                        <i class="fas fa-archive"></i>
+                        <span class="texto-menu">Módulo Financeiro</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="receitas.php" class="link-menu"><i class="fa-solid fa-hand-holding-dollar"></i>Receitas</a></li>
+                        <li><a href="despesas.php" class="link-menu"><i class="fa-solid fa-arrow-trend-down"></i>Despesas</a></li>
+                    </ul>
+                </li>
+                
+                <li class="item-menu">
+                    <a href="" class="link-menu">
+                        <i class="fas fa-users"></i>
+                        <span class="texto-menu">Cadastros</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="clientes.php" class="link-menu"><i class="fas fa-user"></i> Clientes</a></li>
+                        <li><a href="usuarios.php" class="link-menu"><i class="fas fa-users"></i> Usuarios</a></li>
+                        <li><a href="servicos.php" class="link-menu"><i class="fa-solid fa-brush"></i> Serviços</a></li>
+                        <li><a href="profissionais.php" class="link-menu"><i class="fas fa-user-tie"></i> Profissionais</a></li>
+                        <li><a href="tiposdereceitas.php" class="link-menu"><i class="fa-solid fa-hand-holding-dollar"></i> Tipos de Receitas</a></li>
+                        <li><a href="tiposdedespesas.php" class="link-menu"><i class="fa-solid fa-arrow-trend-down"></i> Tipos de Despesas</a></li>
+                    </ul>
+                    
+                </li>
+
+                <li class="item-menu">
+                    <a href="relatorio.php" class="link-menu">
+                        <i class="fas fa-chart-line"></i>
+                        <span class="texto-menu">Relatórios</span>
+                    </a>
+                </li>
+        
+                <li class="item-menu">
+                    <a href="" class="link-menu">
+                        <i class="fas fa-cog"></i>
+                        <span class="texto-menu">Configurações</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="backend/logout.php" class="link-menu"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="dashboard">
+        <h2>Dashboard</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Agendamentos</h3>
+                </div>
+                <div class="card-body">
+                    <p>Total de Agendamentos: <strong>25</strong></p>
+                    <p>Agendamentos Hoje: <strong>5</strong></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Receitas</h3>
+                </div>
+                <div class="card-body">
+                    <p>Total Receitas: <strong>R$ 1.500,00</strong></p>
+                    <p>Receitas Hoje: <strong>R$ 300,00</strong></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-tags"></i>
+                    <h3>Promoções Ativas</h3>
+                </div>
+                <div class="card-body">
+                    <p>Total de Promoções: <strong>3</strong></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-users"></i>
+                    <h3>Clientes</h3>
+                </div>
+                <div class="card-body">
+                    <p>Total de Clientes: <strong>150</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

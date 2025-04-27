@@ -1,0 +1,229 @@
+/* Variáveis para as cores */
+:root {
+    --cor-principal: #FF66B2; /* Rosa */
+    --cor-secundaria: #f8f8f8; /* Cor de fundo clara */
+    --cor-texto: #333;
+    --cor-hover: #FF3385; /* Cor mais escura para o hover */
+    --transicao: all 0.3s ease; /* Transição suave */
+}
+
+/* Reset de margin e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Barra lateral */
+.barra_lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: var(--cor-principal);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    z-index: 100;
+
+    /* Adicionando o overflow para permitir a rolagem */
+    overflow-y: auto; 
+}
+
+.barra_lateral::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+}
+
+.barra_lateral::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); /* Cor da "pegada" da barra */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.barra_lateral::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Cor ao passar o mouse */
+}
+
+
+.barra_lateral.fechada {
+    width: 83px;
+}
+
+.barra_lateral header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.barra_lateral .logo img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.barra_lateral .texto_logo {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.barra_lateral .texto_logo .nome_usuario {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.barra_lateral .texto_logo .cargo_usuario {
+    font-size: 0.9rem;
+}
+
+.barra_lateral .toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.barra_lateral.fechada .toggle {
+    transform: rotate(180deg);
+}
+
+.barra_lateral .toggle:hover {
+    transform: rotate(90deg);
+}
+.barra_lateral.fechada .texto-menu {
+    display: none;
+}
+.barra_lateral .menu ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.barra_lateral .menu li {
+    margin-bottom: 15px;
+}
+
+.barra_lateral .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    padding: 10px;
+    border-radius: 8px;
+   
+}
+
+.barra_lateral .menu li a i {
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+.barra_lateral .menu li a:hover {
+    background-color: #fff;
+    color: var(--cor-principal);
+}
+
+.barra_lateral .menu li a:hover i {
+    color: var(--cor-principal);
+}
+
+/* Estilo para o submenu */
+.item-menu > .submenu {
+    display: none; /* Submenu está oculto por padrão */
+    list-style: none;
+    margin: 10px 0 0 20px; /* Indentação para o submenu */
+}
+
+.item-menu:hover > .submenu {
+    display: block; /* Exibe o submenu quando o item do menu é hover */
+}
+
+.submenu li {
+    margin-bottom: 10px;
+}
+
+.submenu li a {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.submenu li a:hover {
+    background-color: var(--cor-principal);
+}
+
+
+/* Estilo para o conteúdo principal */
+.conteudo {
+    margin-left: 250px; /* Espaço para a barra lateral aberta */
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Transição suave ao abrir/fechar a barra lateral */
+}
+
+.barra_lateral.fechada + .conteudo {
+    margin-left: 70px; /* Ajusta o conteúdo quando a barra lateral está fechada */
+}
+
+.dashboard {
+    padding: 20px;
+    margin-left: 250px; /* Espaço para a barra lateral aberta */
+    transition: margin-left 0.3s ease; /* Transição suave ao abrir/fechar a barra lateral */
+}
+
+.dashboard h2 {
+    margin-bottom: 20px;
+    color: var(--cor-texto);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-header i {
+    font-size: 2rem;
+    color: var(--cor-principal);
+    margin-right: 10px;
+}
+
+.card-body {
+    color: #666;
+}
+
+.card-body p {
+    margin: 5px 0;
+}
+
+/* Ajuste para quando a barra lateral estiver fechada */
+.barra_lateral.fechada + .dashboard {
+    margin-left: 70px; /* Ajusta o conteúdo quando a barra lateral está fechada */
+}
